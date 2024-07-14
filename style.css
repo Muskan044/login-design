@@ -14,11 +14,11 @@ section{
     background-color: #fff;
     display: flex;
     margin-top: 50px;
-    margin-left: 200px;
-    margin-right: 200px;
+    margin-left: 150px;
+    margin-right: 150px;
     margin-bottom: 50px;
-    width: 70%;
-    height: 80vh;
+    
+    height:calc(100vh - 100px);
 }
 section .imgBox{
     position: relative;
@@ -50,11 +50,10 @@ section .imgBox img{
 section .contentBox{
     display: flex;
     align-items: center;
-    justify-content: center;
     width: 50%;
     height: 100%;
-}
-section .contentBox .formBox{
+    justify-content: center;
+    
     width: 50%;
 }
 section .contentBox .formBox h2{
@@ -67,28 +66,33 @@ section .contentBox .formBox h2{
     display: inline-block;
 }
 section .contentBox .formBox .inputBox , p{
-    margin-bottom: 20px;
-    color: #607d8b;
+    font-size: 17px;
+    opacity: 70%;
+    margin-bottom: 30px;
+    color: #37474e;
 }
 section .contentBox .formBox .inputBox span{
-    font-size: 16px;
+    font-size: 12px;
     margin-bottom: 5px;
     display: inline-block;
-    color: #607d8b;
+    color: #37474e;
+    opacity: 70%;
     font-weight: 300;
     letter-spacing: 1px;
 }
 section .contentBox .formBox .inputBox input{
     width: 100%;
-    padding: 10px 20px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 10px;
     outline: none;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 12px;
     letter-spacing: 1px;
-    color: #607d8b;
+    color: #37474e;
     background: transparent;
     border-radius: 5px;
-    border: 1px solid #607d8b;
+    border: 1px solid #37474e;
 }
 section .contentBox .formBox .inputBox input[type="submit"]{
     background: rgb(167, 91, 202);
@@ -102,16 +106,89 @@ section .contentBox .formBox .inputBox input[type="submit"]:hover{
     background: rgb(173, 105, 205);
 }
 section .contentBox .formBox .remember{
-    margin-bottom: 10px;
-    color: #607d8b;
+    margin-bottom: 30px;
+    color: #37474e;
     font-weight: 400;
     font-size: 14px;
+    opacity: 70%;
     display: flex;
     justify-content: space-between;
 }
 section .contentBox .formBox .remember a{
-    color: #607d8b;
+    color: #37474e;
 }
 section .contentBox .formBox .inputBox , p a{
+
     color: rgb(167, 91, 202);
+}
+
+#inputbox1{
+    margin-top: 30px;
+}
+
+@media (max-width: 1200px) {
+    section {
+        margin: 50px 100px;
+    }
+}
+
+@media (max-width: 992px) {
+    section {
+        margin: 50px;
+    }
+
+    section .imgBox, section .contentBox {
+        width: 100%;
+    }
+
+    section .contentBox .formBox {
+        width: 80%;
+    }
+
+    .text-overlay {
+        left: 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    section {
+        flex-direction: column;
+        height: auto;
+        margin: 20px;
+    }
+
+    section .imgBox {
+        width: 100%;
+        height: 200px;
+    }
+
+    section .contentBox {
+        width: 100%;
+    }
+
+    section .contentBox .formBox {
+        width: 90%;
+    }
+
+    .text-overlay {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 576px) {
+    section {
+        margin: 10px;
+    }
+
+    section .imgBox {
+        height: 150px;
+    }
+
+    .text-overlay {
+        font-size: 30px;
+    }
+
+    section .contentBox .formBox {
+        width: 100%;
+    }
 }
